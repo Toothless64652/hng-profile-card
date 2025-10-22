@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG Task 0 - Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <article data-testid="test-profile-card">
+            
+            <!-- Avatar image -->
+            <figure>
+                <img src="https://i.ibb.co/ZzBQgkCL/photo-6035276414024008288-y.jpg" 
+                alt="HammedT19 Profile Picture" 
+                data-testid="test-user-avatar">
+            </figure>
+            
+            <!-- Main content area -->
+            <div class="content-area">
+                <!-- Header with name and ID -->
+                <header>
+                    <h2 data-testid="test-user-name">HAMMED ADEDEJI - HammedT19</h2>
+                    <p class="user-id" data-testid="test-user-time">1761088530027</p>
+                </header>
+                
+                <!-- Biography -->
+                <p data-testid="test-user-bio">
+                    A Passionate frontend developer with years of experience building responsive web applications. 
+                    I am Currently paticipating in the HNG internship program and i am excited to learn and grow with the community.
+                </p>
+                
+                <!-- Social links -->
+                <nav data-testid="test-user-social-links">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/toothless64652" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-testid="test-user-social-github">
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/hammed-adedeji" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-testid="test-user-social-linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/toothless019" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-testid="test-user-social-twitter">
+                            <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Separator line -->
+                <hr class="separator">
+                
+                <!-- Bottom section with hobbies and dislikes -->
+                <div class="bottom-section">
+                    <!-- Hobbies section -->
+                    <section data-testid="test-user-hobbies">
+                        <h3>Hobbies</h3>
+                        <ul>
+                            <li>Reading tech blogs and books</li>
+                            <li>Coding side projects</li>
+                            <li>Watching movies and anime</li>
+                            <li>Riding motorcycles and eating</li>
+                            <li>Playing Chess and Music</li>
+                        </ul>
+                    </section>
+
+                    <!-- Dislikes section -->
+                    <section data-testid="test-user-dislikes">
+                        <h3>Dislikes</h3>
+                        <ul>
+                            <li>Loud noises and distractions</li>
+                            <li>Delays and inefficiency</li>
+                            <li>Poorly written documentation</li>
+                            <li>Traffic jams</li>
+                            <li>Migraines and Headaches</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

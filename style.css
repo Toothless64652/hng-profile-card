@@ -1,0 +1,265 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Profile card container */
+article[data-testid="test-profile-card"] {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Avatar styles */
+figure {
+    flex: 0 0 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: grey;
+}
+
+img[data-testid="test-user-avatar"] {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: 100%;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Content area */
+.content-area {
+    flex: 1;
+    padding: 30px 30px 20px 20px;
+}
+
+/* Header styles */
+header {
+    margin-bottom: 20px;
+}
+
+h2[data-testid="test-user-name"] {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.user-id {
+    font-size: 0.9rem;
+    color: #3498db;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Biography styles */
+p[data-testid="test-user-bio"] {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+ }
+
+/* Social links styles */
+nav[data-testid="test-user-social-links"] ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav[data-testid="test-user-social-links"] li {
+    margin: 0;
+}
+
+nav[data-testid="test-user-social-links"] a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: #666;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+nav[data-testid="test-user-social-links"] a:hover {
+    background: #f8f9fa;
+    color: #333;
+    transform: scale(1.1);
+}
+
+/* Separator line */
+.separator {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 5px 0;
+}
+
+/* Bottom section with hobbies and dislikes */
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 0;
+}
+
+/* Section styles */
+section[data-testid="test-user-hobbies"],
+section[data-testid="test-user-dislikes"] {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+section h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section li {
+    padding: 2px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+section[data-testid="test-user-hobbies"] li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+section[data-testid="test-user-dislikes"] li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    article[data-testid="test-profile-card"] {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    figure {
+        flex: none;
+        padding: 30px;
+    }
+    
+    .content-area {
+        padding: 0 30px 20px 30px;
+    }
+    
+    .bottom-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    h2[data-testid="test-user-name"] {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .user-id {
+        text-align: center;
+    }
+    
+    p[data-testid="test-user-bio"] {
+        text-align: center;
+    }
+    
+    nav[data-testid="test-user-social-links"] ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    article[data-testid="test-profile-card"] {
+        margin: 10px;
+    }
+    
+    figure {
+        padding: 20px;
+    }
+    
+    .content-area {
+        padding: 0 20px 20px 20px;
+    }
+    
+    img[data-testid="test-user-avatar"] {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h2[data-testid="test-user-name"] {
+        font-size: 1.4rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    article[data-testid="test-profile-card"] {
+        border: 2px solid #000;
+    }
+    
+    nav[data-testid="test-user-social-links"] a {
+        border: 2px solid #000;
+    }
+}
